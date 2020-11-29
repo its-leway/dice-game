@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="wrapper">
+            <div class="intro">
+                <h1>How to play:</h1>
+                <p>Have a higher score than your opponent to win after 3 rounds</p>
+                <p>Roll doubles to get two times the value of the number rolled</p>
+                <p>Roll a one and have your points = 0</p>
+                <p>Roll any combination and earn a value of the two dice summed</p>
+                <button class="roll" id="roll">Roll</button>
+                <audio id="dice-sound">
+                    <source src="sounds/dice-roll.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                 </audio>
+                
+            </div>
+            <hr>
+
+            <div class="columns">
+                <div class="player-1">
+                    <h2>Player 1 Dice</h2>
+                    <img id="player1dice1" src="images/dice1.png">
+                    <img id="player1dice2" src="images/dice1.png">
+                    <p id="player1score">Score: 0</p>
+                    <p>Total: <span id="player1total"></span> </p>
+                    
+        
+                </div>
+        
+                <div class="player-2">
+                    <h2>Player 2 Dice</h2>
+                    <img id="player2dice1" src="images/dice1.png">
+                    <img id="player2dice2" src="images/dice1.png">
+                    <p id="player2score">Score: 0</p>
+                    <p>Total: <span id="player2total"></span> </p>
+                </div>
+                
+            </div>
+
+           <div class="results">
+                
+                <p id="results"></p>
+           </div>
+            
+
+        </div>
+    </div> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+    
+</body>
+</html>
+
+

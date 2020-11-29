@@ -1,0 +1,93 @@
+// Variables
+$colorOne: rgba(255, 255, 255, 0.9);
+$colorTwo: grey;
+$hover: rgb(185, 184, 184);
+
+// CSS
+
+p, h1, h2, h3, h4{
+    font-family: 'Playfair Display', serif;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body{ 
+    background-image: url("../images/wood-fence-background.jpg");
+    //background-color: $colorOne;
+}
+
+.wrapper{
+    margin: 4em auto;
+    background-color: $colorOne;
+    width: 40%;
+    border: solid 1px $colorTwo;
+    border-radius: 1em;
+
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.intro{
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.columns{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-areas: 
+    'player-1 player-2'
+    ;
+}
+
+.player-1{
+    
+    text-align: center;
+    
+    
+}
+
+.player-2{
+    text-align: center;
+}
+
+.results{
+    text-align: center;
+}
+
+button{
+    margin-top: 10px;
+    width: 12%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $colorOne;
+    background-color:$colorTwo;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: $hover;
+}
+
+@media screen and (max-width: 800px){
+    
+    .columns{
+
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            
+            'left-column' 
+            'right-column'
+        ;
+    }
+    .right-column{
+        justify-content: center;
+    }
+}
